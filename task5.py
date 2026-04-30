@@ -21,11 +21,11 @@ try:
         if "ASCII" in file:
             flag_file = file.split(':')[0]
     sh = shell.run('cat ' + flag_file)
-    flag = sh.recvall().decode()
+    flag = sh.recvall().decode().strip()
     print("Flag Discovered:" + JAUNE + flag)
     print(BLEU + "Writing the flag inside the " + SOULIGNE + "flag5.txt" + RESET + BLEU + " file...")
     with open("flag5.txt", "w") as f:
-        f.write(flag)
+        f.write(flag.strip())
         print(VERT + GRAS + "Task 5 terminée et écrite dans " + SOULIGNE + "flag5.txt" + RESET)
 except Exception as e:
     print(ROUGE + GRAS + SOULIGNE + "Flag undiscovered because of the error: " + str(e))
