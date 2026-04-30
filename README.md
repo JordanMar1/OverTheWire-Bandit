@@ -39,6 +39,10 @@ Remove all flags with the following command:
 ./remove_flag.sh
 ```
 
+## Progression
+
+Completion: 36%
+
 # Objectives
 
 | Task | Status | Date |
@@ -49,11 +53,11 @@ Remove all flags with the following command:
 | Task 3 | ✅ Done | 30 Apr 2026 |
 | Task 4 | ✅ Done | 30 Apr 2026 |
 | Task 5 | ✅ Done | 30 Apr 2026 |
-| Task 6 | ❌ Not Done | |
-| Task 7 | ❌ Not Done | |
-| Task 8 | ❌ Not Done | |
-| Task 9 | ❌ Not Done ||
-| Task 10 | ❌ Not Done ||
+| Task 6 | ✅ Done | 30 Apr 2026 |
+| Task 7 | ✅ Done | 30 Apr 2026 |
+| Task 8 | ✅ Done | 30 Apr 2026 |
+| Task 9 | ✅ Done | 30 Apr 2026 |
+| Task 10 | ✅ Done | 30 Apr 2026|
 | Task 11 | ❌ Not Done ||
 | Task 12 | ❌ Not Done ||
 | Task 13 | ❌ Not Done ||
