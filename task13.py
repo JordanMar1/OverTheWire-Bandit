@@ -40,6 +40,5 @@ try:
 
 except Exception as e:
     print(ROUGE + GRAS + SOULIGNE + "Flag undiscovered because of the error: " + str(e) + RESET)
-
 finally:
     shell.close()

@@ -8,3 +8,4 @@ if shell['whoami'].decode() == "bandit0":
     print(VERT + GRAS + SOULIGNE + "Connected to the ssh")
 else:
     print(ROUGE + GRAS + SOULIGNE + "Error, check that everything is okay")
+shell.close()

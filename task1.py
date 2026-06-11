@@ -22,4 +22,5 @@ try:
         print(VERT + GRAS + "Task 1 terminée et écrite dans " + SOULIGNE + "flag1.txt" + RESET)
 except Exception as e:
     print(ROUGE + GRAS + SOULIGNE + "Flag undiscovered because of the error: " + str(e))
-
+finally:
+    shell.close()
