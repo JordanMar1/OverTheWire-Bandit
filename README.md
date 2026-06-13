@@ -42,7 +42,7 @@ Remove all flags with the following command:
 
 ## Progression
 
-Completion: 47%
+Completion: 50%
 
 # Objectives
 
@@ -63,7 +63,7 @@ Completion: 47%
 | Task 12 | ✅ Done | 11 June 2026 |
 | Task 13 | ✅ Done | 11 June 2026 |
 | Task 14 | ✅ Done | 13 June 2026 |
-| Task 15 | ❌ Not Done ||
+| Task 15 | ✅ Done | 13 June 2026 |
 | Task 16 | ❌ Not Done ||
 | Task 17 | ❌ Not Done ||
 | Task 18 | ❌ Not Done ||
