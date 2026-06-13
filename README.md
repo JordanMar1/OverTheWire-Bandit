@@ -30,6 +30,7 @@ A series of flags solution made by me in order to bypass more easily password ch
 Compile all python tasks in numerical order with the following command:
 
 ```bash
+pip install -r requirements.txt
 ./bandit.sh
 ```
 
