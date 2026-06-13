@@ -18,19 +18,43 @@ jobs:
         pip install -r requirements.txt
     - name: Run Task 1
       run: python "task1.py"
-    # Sauvegarde le flag généré par la task 1 pour la task 2
-    - name: Upload Flag 2
+    # Sauvegarde le flag1.txt généré par la task 1
+    - name: Upload Flag 1
       uses: actions/upload-artifact@v4
       with:
-        name: flag2-artifact
-        path: flag2.txt
+        name: flag1-artifact
+        path: flag1.txt
 
   task2:
     needs: task1
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    # Récupère le flag généré par la task 1
+    # Récupère le flag1.txt pour que task2.py puisse le lire
+    - name: Download Flag 1
+      uses: actions/download-artifact@v4
+      with:
+        name: flag1-artifact
+    - uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+    - name: Run Task 2
+      run: python "task2.py"
+    - name: Upload Flag 2
+      uses: actions/upload-artifact@v4
+      with:
+        name: flag2-artifact
+        path: flag2.txt
+
+  task3:
+    needs: task2
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
     - name: Download Flag 2
       uses: actions/download-artifact@v4
       with:
@@ -42,16 +66,16 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
-    - name: Run Task 2
-      run: python "task2.py"
+    - name: Run Task 3
+      run: python "task3.py"
     - name: Upload Flag 3
       uses: actions/upload-artifact@v4
       with:
         name: flag3-artifact
         path: flag3.txt
 
-  task3:
-    needs: task2
+  task4:
+    needs: task3
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
@@ -66,16 +90,16 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
-    - name: Run Task 3
-      run: python "task3.py"
+    - name: Run Task 4
+      run: python "task4.py"
     - name: Upload Flag 4
       uses: actions/upload-artifact@v4
       with:
         name: flag4-artifact
         path: flag4.txt
 
-  task4:
-    needs: task3
+  task5:
+    needs: task4
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
@@ -90,16 +114,16 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
-    - name: Run Task 4
-      run: python "task4.py"
+    - name: Run Task 5
+      run: python "task5.py"
     - name: Upload Flag 5
       uses: actions/upload-artifact@v4
       with:
         name: flag5-artifact
         path: flag5.txt
 
-  task5:
-    needs: task4
+  task6:
+    needs: task5
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
@@ -114,16 +138,16 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
-    - name: Run Task 5
-      run: python "task5.py"
+    - name: Run Task 6
+      run: python "task6.py"
     - name: Upload Flag 6
       uses: actions/upload-artifact@v4
       with:
         name: flag6-artifact
         path: flag6.txt
 
-  task6:
-    needs: task5
+  task7:
+    needs: task6
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
@@ -138,16 +162,16 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
-    - name: Run Task 6
-      run: python "task6.py"
+    - name: Run Task 7
+      run: python "task7.py"
     - name: Upload Flag 7
       uses: actions/upload-artifact@v4
       with:
         name: flag7-artifact
         path: flag7.txt
 
-  task7:
-    needs: task6
+  task8:
+    needs: task7
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
@@ -162,16 +186,16 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
-    - name: Run Task 7
-      run: python "task7.py"
+    - name: Run Task 8
+      run: python "task8.py"
     - name: Upload Flag 8
       uses: actions/upload-artifact@v4
       with:
         name: flag8-artifact
         path: flag8.txt
 
-  task8:
-    needs: task7
+  task9:
+    needs: task8
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
@@ -186,16 +210,16 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
-    - name: Run Task 8
-      run: python "task8.py"
+    - name: Run Task 9
+      run: python "task9.py"
     - name: Upload Flag 9
       uses: actions/upload-artifact@v4
       with:
         name: flag9-artifact
         path: flag9.txt
 
-  task9:
-    needs: task8
+  task10:
+    needs: task9
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
@@ -210,16 +234,16 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
-    - name: Run Task 9
-      run: python "task9.py"
+    - name: Run Task 10
+      run: python "task10.py"
     - name: Upload Flag 10
       uses: actions/upload-artifact@v4
       with:
         name: flag10-artifact
         path: flag10.txt
 
-  task10:
-    needs: task9
+  task11:
+    needs: task10
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
@@ -234,16 +258,16 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
-    - name: Run Task 10
-      run: python "task10.py"
+    - name: Run Task 11
+      run: python "task11.py"
     - name: Upload Flag 11
       uses: actions/upload-artifact@v4
       with:
         name: flag11-artifact
         path: flag11.txt
 
-  task11:
-    needs: task10
+  task12:
+    needs: task11
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
@@ -258,16 +282,16 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
-    - name: Run Task 11
-      run: python "task11.py"
+    - name: Run Task 12
+      run: python "task12.py"
     - name: Upload Flag 12
       uses: actions/upload-artifact@v4
       with:
         name: flag12-artifact
         path: flag12.txt
 
-  task12:
-    needs: task11
+  task13:
+    needs: task12
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
@@ -282,16 +306,16 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
-    - name: Run Task 12
-      run: python "task12.py"
+    - name: Run Task 13
+      run: python "task13.py"
     - name: Upload Flag 13
       uses: actions/upload-artifact@v4
       with:
         name: flag13-artifact
         path: flag13.txt
 
-  task13:
-    needs: task12
+  task14:
+    needs: task13
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
@@ -299,30 +323,6 @@ jobs:
       uses: actions/download-artifact@v4
       with:
         name: flag13-artifact
-    - uses: actions/setup-python@v5
-      with:
-        python-version: '3.11'
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
-    - name: Run Task 13
-      run: python "task13.py"
-    - name: Upload Flag 14
-      uses: actions/upload-artifact@v4
-      with:
-        name: flag14-artifact
-        path: flag14.txt
-
-  task14:
-    needs: task13
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v4
-    - name: Download Flag 14
-      uses: actions/download-artifact@v4
-      with:
-        name: flag14-artifact
     - uses: actions/setup-python@v5
       with:
         python-version: '3.11'
