@@ -1,2 +1,2 @@
-*.txt
+flag*.txt
 __pycache__/*

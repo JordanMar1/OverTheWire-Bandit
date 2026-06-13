@@ -41,7 +41,7 @@ Remove all flags with the following command:
 
 ## Progression
 
-Completion: 38.2353%
+Completion: 46%
 
 # Objectives
 
@@ -61,7 +61,7 @@ Completion: 38.2353%
 | Task 11 | ✅ Done | 11 June 2026 |
 | Task 12 | ✅ Done | 11 June 2026 |
 | Task 13 | ✅ Done | 11 June 2026 |
-| Task 14 | ❌ Not Done ||
+| Task 14 | ✅ Done | 13 June 2026 |
 | Task 15 | ❌ Not Done ||
 | Task 16 | ❌ Not Done ||
 | Task 17 | ❌ Not Done ||
@@ -83,4 +83,5 @@ Completion: 38.2353%
 | Task 33 | ❌ Not Done ||
 | Task 34 | ❌ Not Done ||
 | Bandit.sh | ✅ Done | 30 Apr 2026 |
+| requirements.txt | ✅ Done | 13 June 2026 |
 | Flag Remover | ✅ Done | 30 Apr 2026 |
