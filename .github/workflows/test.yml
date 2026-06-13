@@ -1,0 +1,32 @@
+name: Tasks Verification
+
+on:
+  push:
+  pull_request:
+jobs:
+  run-scripts:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        script: [
+          "task1.py", "task2.py", "task3.py", "task4.py", 
+          "task5.py", "task6.py", "task7.py", "task8.py", 
+          "task9.py", "task10.py", "task11.py", "task12.py", 
+          "task13.py", "task14.py"
+        ]
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+    - name: Run Tasks
+      run: |
+        python ${{ matrix.script }}
